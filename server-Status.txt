@@ -1,0 +1,9 @@
+400 - bad request when invalid something
+401 - user unathorized 
+403 - forbidden you can't access it
+404 - page not found, when wrong url and api hit then show not found this page on given url
+429 - when too many request
+200 - ok 
+201 - created new resources
+
+
