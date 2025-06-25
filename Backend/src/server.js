@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import noteRoutes from "./router/routeNotes.js"; // ✅ Confirm the path
 import { connectDB } from "./config/db.js";
+import cors from "cors";
 
 const app = express();
 
@@ -12,6 +13,11 @@ dotenv.config();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 // middleware
 app.use((req, res, next) => {
