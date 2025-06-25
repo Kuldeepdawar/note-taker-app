@@ -6,4 +6,11 @@
 200 - ok 
 201 - created new resources
 
+middleware
+client .....req......>>.server
+
+client<<......res....middleware.....server
+
+redis-cli --tls -u redis://default:AczyAAIjcDE0MjllZGYzNTZjMWU0NjM4YmY4MGZjOTA4NmY1MWE1ZnAxMA@lucky-swine-52466.upstash.io:6379
+
 
