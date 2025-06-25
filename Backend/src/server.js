@@ -9,7 +9,6 @@ const app = express();
 dotenv.config();
 
 // Connect to MongoDB before starting the server
-connectDB();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -26,7 +25,9 @@ app.use("/api/notes", noteRoutes);
 // Port
 const PORT = process.env.PORT || 5001;
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
 });
+// Start server
